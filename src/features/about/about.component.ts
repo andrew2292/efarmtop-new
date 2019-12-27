@@ -1,9 +1,18 @@
-import { Component } from '@angular/core';
+import {Component, AfterViewInit} from '@angular/core';
+import {mainDataService} from '../shared/mainData.injectable';
+import { WindowRef } from '../shared/windowWrapper';
 
 @Component({
-  templateUrl: './about.html'
+    templateUrl: 'about.html'
 })
 
-export class AboutComponent {
-  title = 'top-caffe';
+export class AboutComponent implements AfterViewInit{
+  constructor(private windowElement: WindowRef, private sharedData: mainDataService) {
+
+  };
+
+  ngAfterViewInit(){
+    this.windowElement.nativeWindow.mixpanel.track( "Page Viewed", { "page": '/despre' } );
+    // this.sharedData.currentState = this.router.stateService.$current.name;
+  }
 }

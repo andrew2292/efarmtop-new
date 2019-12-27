@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row">
+        <div [ngsReveal]="{ reset: false}" class="col s12 m12 l12 noPadding">
+            <div class="card horizontal hoverable hide-on-med-and-down">
+                <div class="card-image">
+                  <img class="thumbnailImage" src="{{product.headerImageURL}}" alt="{{product.name}}"/>
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <span class="card-title" *ngIf="product.name" >{{product.name}}</span>
+                    <span class="card-title" *ngIf="product.code"><b>Cod produs:</b> {{product.code}}</span>
+                    <div class="col s12 m12 noPadding moreImages">
+                      <div class="float-left">
+                        <ks-modal-gallery [modalImages]="images" [id]="1"></ks-modal-gallery>
+                      </div>
+                    </div>
+                    <br>
+                    <div *ngIf="product.shortDescription" class="col m10 s12" [innerHTML]="product.shortDescription">
+                    </div>
+                    <div *ngIf="product.characteristics" class="col m10 s12">
+                        <ul class="noMargins">
+                            <li class="prodChars" *ngFor="let chars of product.characteristics" [innerHTML]="chars"></li>
+                            <li class="prodChars" *ngIf="product.price"><b class="lightGreen">Preț promoțional:</b> <b class="lightGreen" [innerHTML]="product.price"></b></li>
+                        </ul>
+                        <br/>
+                        <p><b class="orangeText">ATENȚIE! Pozele afișate pe site au caracter informativ și nu reprezintă obligație contractuală!</b></p>
+                    </div>
+                  </div>
+                  <div class="card-action">
+                    <a [routerLink]="['/categorie', category._id]" class="pull-right">Înapoi la {{category.name}}</a>
+                    <!--<a *ngIf="previousState === 'promos'" uiSref="promos" class="pull-right">Înapoi la Promoții</a>-->
+                  </div>
+                </div>
+            </div>
+            <div class="card hoverable hide-on-large-only">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="{{product.headerImageURL}}" alt="{{product.name}}"/>
+              </div>
+              <div class="card-content">
+                <span class="card-title smallTitle activator grey-text text-darken-4" *ngIf="product.name" >{{product.name}}</span>
+                <p class="justified">Apăsați pe numele/imaginea produsului pentru mai multe informații</p>
+                <br/>
+                <p class="justified"><b class="orangeText">ATENȚIE! Poza afișată pe site are caracter informativ și nu reprezintă obligație contractuală!</b></p>
+                <br/>
+                <p>
+                  <a class="lightOrange" [routerLink]="['/categorie', category._id]">Înapoi la {{category.name}}</a>
+                  <!--<a *ngIf="previousState === 'promos'" class="lightOrange" uiSref="promos">Înapoi la Promoții</a>-->
+                </p>
+              </div>
+              <div *ngIf="product.characteristics" class="card-reveal">
+                <span class="card-title smallTitle grey-text text-darken-4" *ngIf="product.name" >{{product.name}}</span>
+                <br/>
+                <ul class="noMargins">
+                  <li class="prodChars justified" *ngFor="let chars of product.characteristics" [innerHTML]="chars"></li>
+                  <li class="prodChars justified" *ngIf="product.price"><b class="lightGreen">Preț promoțional:</b> <b class="lightGreen" [innerHTML]="product.price"></b></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+    </div>
+</div>

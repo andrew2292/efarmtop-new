@@ -1,0 +1,20 @@
+<div class="hiddenOverflow container">
+    <div class="row noPadding">
+            <div class="col s12 noPadding">
+                <h3 [ngsReveal]="{ reset: false}" class="text-center">
+                    PARTENERI
+                </h3>
+            </div>
+    </div>
+    <div class="row noPadding">
+            <div class="col s12 l4 m6 partners" *ngFor="let partner of partnersPartOne;" [ngsReveal]="{ reset: false}">
+              <img class="imgPartners handCursor" src="{{partner.image}}" (click)="goToWebsite(partner.website)" alt="Partener EFARM TOP" width="200"/>
+            </div>
+            <div class="col s12 l4 m6 partners" *ngFor="let partner of partnersPartTwo; " [ngsReveal]="{ reset: false}">
+              <img class="imgPartners handCursor" src="{{partner.image}}" (click)="goToWebsite(partner.website)" alt="Partener EFARM TOP" width="200"/>
+            </div>
+            <div class="col s12 l4 m6 partners" *ngFor="let partner of partnersPartThree; " [ngsReveal]="{ reset: false}">
+              <img class="imgPartners handCursor" src="{{partner.image}}" (click)="goToWebsite(partner.website)" alt="Partener EFARM TOP" width="200"/>
+            </div>
+    </div>
+</div>
