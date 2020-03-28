@@ -74,7 +74,7 @@ const MZ_MODULES = [
   exports: MZ_MODULES,
 })
 export class MaterializeComponentModule {
-  static forRoot(): ModuleWithProviders {
+  static forRoot(): ModuleWithProviders<MaterializeComponentModule> {
     return {
       ngModule: MaterializeComponentModule,
     };
