@@ -12,7 +12,6 @@ export class AboutComponent implements AfterViewInit{
   };
 
   ngAfterViewInit(){
-    this.windowElement.nativeWindow.mixpanel.track( "Page Viewed", { "page": '/despre' } );
     // this.sharedData.currentState = this.router.stateService.$current.name;
   }
 }

@@ -13,8 +13,7 @@
     "experimentalDecorators": true,
     "target": "es2015",
     "types": [
-      "jquery",
-      "materialize-css"
+      "jquery"
     ],
     "typeRoots": [
       "node_modules/@types"

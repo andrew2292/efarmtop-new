@@ -63,8 +63,6 @@ export class PartnersComponent implements AfterViewInit{
   };
 
   ngAfterViewInit(){
-    this.winRef.nativeWindow.mixpanel.track( "Page Viewed", { "page": '/parteneri' } );
-
     // this.sharedData.currentState = this.router.stateService.$current.name;
   }
 

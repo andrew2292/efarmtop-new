@@ -11,7 +11,6 @@ export class ContactComponent implements AfterViewInit{
 
   };
   ngAfterViewInit(){
-    this.windowElement.nativeWindow.mixpanel.track( "Page Viewed", { "page": '/contact' } );
     // this.sharedData.currentState = this.router.stateService.$current.name;
   }
 }

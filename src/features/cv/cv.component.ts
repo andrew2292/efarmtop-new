@@ -11,7 +11,6 @@ export class CVComponent implements AfterViewInit{
 
   };
   ngAfterViewInit(){
-    this.windowElement.nativeWindow.mixpanel.track( "Page Viewed", { "page": '/cv' } );
     // this.sharedData.currentState = this.router.stateService.$current.name;
   }
 }

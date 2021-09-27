@@ -12,7 +12,6 @@ export class PromosComponent implements AfterViewInit{
 
   };
   ngAfterViewInit(){
-    this.windowElement.nativeWindow.mixpanel.track( "Page Viewed", { "page": '/promotii' } );
     setTimeout(_=> this.latestProducts = this.sharedData.latestProductsPromos);
     // this.sharedData.currentState = this.router.stateService.$current.name;
   }

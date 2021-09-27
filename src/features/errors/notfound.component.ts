@@ -10,7 +10,6 @@ export class NotFoundComponent implements AfterViewInit{
 
   };
   ngAfterViewInit(){
-    this.windowElement.nativeWindow.mixpanel.track( "Page Viewed", { "page": '/404' } );
     // this.sharedData.currentState = this.router.stateService.$current.name;
   }
 }

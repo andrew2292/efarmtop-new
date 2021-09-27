@@ -10,7 +10,6 @@ export class ForbiddenComponent implements AfterViewInit{
 
   };
   ngAfterViewInit(){
-    this.windowElement.nativeWindow.mixpanel.track( "Page Viewed", { "page": '/403' } );
     // this.sharedData.currentState = this.router.stateService.$current.name;
   }
 }

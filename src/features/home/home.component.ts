@@ -36,7 +36,6 @@ export class HomeComponent implements AfterViewInit{
 
   ngAfterViewInit(){
     let data = [];
-    this.windowElement.nativeWindow.mixpanel.track( "Page Viewed", { "page": '/acasa' } );
     this.sharedData.categories.forEach(function(item) {
       let result = item.products[Math.floor(Math.random() * item.products.length)];
       result.rank =  0.5 - Math.random();

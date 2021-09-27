@@ -47,6 +47,5 @@ export class ProductComponent implements AfterContentInit, OnInit, OnDestroy, Af
   }
 
   ngAfterViewInit(){
-    this.windowElement.nativeWindow.mixpanel.track( "Page Viewed", { "page": '/produs/' +  this.categoryID + '/' + this.productID} );
   }
 }

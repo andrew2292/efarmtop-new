@@ -26,7 +26,6 @@ export class CategoriesComponent implements OnInit, OnDestroy, AfterViewInit{
     this.sub.unsubscribe();
   }
   ngAfterViewInit(){
-    this.windowElement.nativeWindow.mixpanel.track( "Page Viewed", { "page": '/categorie/' +  this.categoryID} );
     // this.sharedData.currentState = this.router.stateService.$current.name;
   }
 }

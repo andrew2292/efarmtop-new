@@ -10,7 +10,6 @@ export class ServerErrorComponent implements AfterViewInit{
 
   };
   ngAfterViewInit(){
-    this.windowElement.nativeWindow.mixpanel.track( "Page Viewed", { "page": '/500' } );
     // this.sharedData.currentState = this.router.stateService.$current.name;
   }
 }
