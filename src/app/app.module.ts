@@ -103,7 +103,7 @@ const appRoutes: Routes = [
     FormsModule,
     NgsRevealModule.forRoot(),
     HttpClientModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, { relativeLinkResolution: 'legacy' }),
     Angulartics2Module.forRoot(),
     Angular2UsefulSwiperModule,
     GalleryModule.forRoot(),
